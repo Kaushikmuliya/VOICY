@@ -1,7 +1,9 @@
 import os
 import datetime
+import threading
 from speak import speak_text
 from music import play_music_by_language
+from musicthread import stop_music
 
 def execute_command(command):
     if "open brave" in command:
@@ -10,6 +12,9 @@ def execute_command(command):
 
     elif "play music" in command:
         play_music_by_language()
+    
+    elif "stop the music" in command:
+        stop_music()
     
     elif "What is time" in command or "tell me the time" in command or "time" in command:
         now=datetime.datetime.now().strftime("%I:%M %p")  #formats time to speak
