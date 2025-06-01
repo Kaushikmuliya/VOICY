@@ -6,9 +6,7 @@ from speak import speak_text
 
 def main():
     speak_text("Hello bro! How can i help you today?")
-    while True:
-        print("What's Up Brother..")
-        
+    while True:        
         command=listen_command()
 
         if command:
