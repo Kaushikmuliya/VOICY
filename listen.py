@@ -1,15 +1,17 @@
 import speech_recognition as sr
-
+from speak import speak_text
 def listen_command():
     r=sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
+        speak_text("Listening...")
         audio = r.listen(source)
     try:
         command = r.recognize_google(audio)
         return command
     except sr.UnknownValueError:
         print("Sorry, I did not catch that.")
+        speak_text("Sorry, I did not catch that")
         return None
     except sr.RequestError:
         print("Speech service Unavailable.")
