@@ -13,7 +13,7 @@ def execute_command(command):
     elif "play music" in command:
         play_music_by_language()
     
-    elif "stop the music" in command:
+    elif "close music" in command:
         stop_music()
     
     elif "What is time" in command or "tell me the time" in command or "time" in command:
